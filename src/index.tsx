@@ -1,16 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import BasicTable from './DisplayTable';
 import App from './App';
-import DisplayTable from './DisplayTable';
-
+import DisplayTable from './DisplayLayoutSwitch';
+import Header from './Header';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <DisplayTable/>
+    <Header/>
+    <DisplayTable />
+    <BasicTable/>
     <App />
   </React.StrictMode>
 );

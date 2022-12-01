@@ -21,22 +21,10 @@ const columns = [
 function App() {
   return (
     <div className="App">
-      <Card>
-        <DataTable
-          title="SunShine"
-          columns={columns}
-          data={Data}
-          defaultSortField="id"
-          sortIcon={<SortIcon />}
-          pagination
-          selectableRows
-        />
-      </Card>
+     
     </div>
   );
 }
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
 
 export default App;

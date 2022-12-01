@@ -1,27 +1,14 @@
-import React from 'react';
-import './App.css';
-import ReactDOM from "react-dom";
-import DataTable from "react-data-table-component";
-import Card from "@material-ui/core/Card";
-import SortIcon from "@material-ui/icons/ArrowDownward";
-import Data from "./db.json";
-const columns = [
-  {
-    First: "Id ",
-    selector: "id",
-    sortable: true,
-  },
-  {
-    name: "First Name",
-    selector: "firstName",
-    sortable: false
-  }
-];
+import "./App.css";
+import BasicTable from "./DisplayTable";
+import DisplayLayoutSwitch from "./DisplayLayoutSwitch";
+import Header from "./Header";
 
 function App() {
   return (
     <div className="App">
-     
+      <Header />
+      <DisplayLayoutSwitch /> 
+      <BasicTable />
     </div>
   );
 }

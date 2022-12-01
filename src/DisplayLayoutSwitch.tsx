@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState } from "react";
 import {
   FormControl,
@@ -12,8 +11,10 @@ export enum TableStyles {
   Table = "Table",
   Grid = "Grid",
 }
+export var selectedStyle: TableStyles=TableStyles.Table;
 export default function RadioButtons() {
   const [DisplayOutput, setValue] = useState<TableStyles>(TableStyles.Table);
+  selectedStyle = DisplayOutput;
 
   return (
     <FormControl className="RadioButtonsContainer">

@@ -1,43 +1,36 @@
-import { ItemType } from "./ItemType";
-type TableRecord = {
-  imageUrl: string;
-  name: string;
-  calories: number;
-  fat: number;
-  carbs: number;
-  protein: number;
-};
-type ItemStructure = { title: string; type: ItemType; key: keyof TableRecord };
+import { DataType,TableRecord } from "./DataType";
+
+type ItemStructure = { title: string; type: DataType; key: keyof TableRecord };
 type ItemStrucutreList = ItemStructure[];
 export const Schema: ItemStrucutreList = [
   {
     title: "Image",
-    type: ItemType.Image,
+    type: DataType.Image,
     key: "imageUrl",
   },
   {
     title: "Item Name",
-    type: ItemType.Text,
+    type: DataType.Text,
     key: "name",
   },
   {
     title: "Fat(g)",
-    type: ItemType.Text,
+    type: DataType.Text,
     key: "fat",
   },
   {
     title: "Carbs(g)",
-    type: ItemType.Text,
+    type: DataType.Text,
     key: "carbs",
   },
   {
     title: "Protein(g)",
-    type: ItemType.Select,
+    type: DataType.Select,
     key: "protein",
   },
   {
     title: "Calories(g)",
-    type: ItemType.Text,
+    type: DataType.Text,
     key: "calories",
   },
 ];

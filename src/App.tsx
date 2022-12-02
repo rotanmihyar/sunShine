@@ -1,14 +1,13 @@
 import "./App.css";
-import BasicTable from "./DisplayTable";
 import DisplayLayoutSwitch from "./DisplayLayoutSwitch";
-import Header from "./Header";
+import Header from "./SunShineHeader";
 
-function App() {
+
+export function App() {
   return (
     <div className="App">
       <Header />
       <DisplayLayoutSwitch /> 
-      <BasicTable />
     </div>
   );
 }

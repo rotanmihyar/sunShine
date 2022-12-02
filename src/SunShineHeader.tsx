@@ -5,6 +5,7 @@ import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
+const logo = "https://start-page.buffer.com/cdn-cgi/image/width=200,height=200/https://buffer-start-page-uploads.s3.amazonaws.com/63626e169a1b8a414924cdcc/1668423340895.icon%20gelb.png";
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
@@ -13,7 +14,7 @@ const darkTheme = createTheme({
     },
   },
 });
-export default function Header() {
+export default function SunShineHeader() {
   return (
     <ThemeProvider theme={darkTheme}>
       <AppBar position="static">
@@ -38,7 +39,7 @@ export default function Header() {
               <Avatar
                 variant={"rounded"}
                 alt="The image"
-                src="https://start-page.buffer.com/cdn-cgi/image/width=200,height=200/https://buffer-start-page-uploads.s3.amazonaws.com/63626e169a1b8a414924cdcc/1668423340895.icon%20gelb.png"
+                src={logo}
                 style={{
                   width: 50,
                   height: 50,

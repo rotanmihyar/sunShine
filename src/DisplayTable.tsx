@@ -6,9 +6,9 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import SchematizedItem from "./SchematizedItem";
-import { Schema, rows } from "./Schema";
+import { Schema, rows } from "./BackendRequests";
 
-export default function BasicTable() {
+export default function DisplayTable() {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">

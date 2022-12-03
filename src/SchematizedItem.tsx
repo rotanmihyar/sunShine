@@ -3,13 +3,13 @@ import Checkbox from "@material-ui/core/Checkbox";
 import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
 import { ReactElement } from "react";
-import { DataType } from "./DataType";
-type SchmetizedItemProp = { value: string; type: DataType };
+import { DisplayItemTypes } from "./DataTypes";
+type SchmetizedItemProp = { value: string; type: DisplayItemTypes };
 export default function SchmetizedItem(
   props: SchmetizedItemProp
 ): ReactElement {
   switch (props.type) {
-    case DataType.Image:
+    case DisplayItemTypes.Image:
       return (
         <Box
           component="img"
@@ -18,14 +18,20 @@ export default function SchmetizedItem(
           src={props.value}
         />
       );
-    case DataType.Date:
+    case DisplayItemTypes.Date:
       return <>{new Date(props.value).toString()}</>;
-    case DataType.Boolean:
+    case DisplayItemTypes.Boolean:
       return <Checkbox checked={!!props.value} />;
-    case DataType.Select:
+    case DisplayItemTypes.Select:
       return (
-        <Select disabled value={props.value} inputProps={{ "aria-label": "Without label" }}>
-          <MenuItem  selected value={props.value}>{props.value}</MenuItem>
+        <Select
+          disabled
+          value={props.value}
+          inputProps={{ "aria-label": "Without label" }}
+        >
+          <MenuItem selected value={props.value}>
+            {props.value}
+          </MenuItem>
         </Select>
       );
     default:

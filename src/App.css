@@ -12,3 +12,14 @@
 .hideElement {
   display: none;
 }
+.GridStyle {
+  margin: auto;
+  text-align: center;
+  float: left;
+  border-style: groove;
+  width: 100%;
+  display: inline-block;
+  margin-top: 25px;
+  border-radius: 20px;
+  box-shadow: 1px 0px 2px 1px rgb(0 0 0 / 20%);
+}

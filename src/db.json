@@ -1,9 +1,29 @@
-
-   [
+{
+  "food": [
     {
-      "id": 1,
-      "firstName": "John"
-     
+      "imageUrl": "https://start-page.buffer.com/cdn-cgi/image/width=200,height=200/https://buffer-start-page-uploads.s3.amazonaws.com/63626e169a1b8a414924cdcc/1668423340895.icon%20gelb.png",
+      "name": "Frozen yoghurt",
+      "calories": 159,
+      "fat": 6.0,
+      "carbs": 24,
+      "protein": 4.0
+    },
+    {
+      "imageUrl": "https://start-page.buffer.com/cdn-cgi/image/width=200,height=200/https://buffer-start-page-uploads.s3.amazonaws.com/63626e169a1b8a414924cdcc/1668423340895.icon%20gelb.png",
+      "name": "Ice cream sandwich",
+      "calories": 159,
+      "fat": 9.0,
+      "carbs": 37,
+      "protein": 4.3
+    },
+    {
+      "imageUrl": "https://start-page.buffer.com/cdn-cgi/image/width=200,height=200/https://buffer-start-page-uploads.s3.amazonaws.com/63626e169a1b8a414924cdcc/1668423340895.icon%20gelb.png",
+      "name": "Gingerbread",
+      "calories": 356,
+      "fat": 16.0,
+      "carbs": 49,
+      "protein":  3.9
     }
     
   ]
+}

@@ -1,34 +1,26 @@
 import Grid from "@mui/material/Grid";
-import { styled } from "@mui/material/styles";
-import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
+import { Schema } from "./BackendRequests";
+import { BackendDataRecord } from "./DataTypes";
+import SchematizedItem from "./SchematizedItem";
 
-
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: "center",
-  color: theme.palette.text.secondary,
-}));
-
-export default function DisplayGrid() {
+type BackendData = { Data: BackendDataRecord[] };
+export default function DisplayGrid(rows: BackendData) {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2}>
-        <Grid item xs={8}>
-          <Item>xs=8</Item>
+    <Grid container spacing={2}>
+      {rows.Data.map((row) => (
+        <Grid xs={3} spacing={3} className="GridStyle">
+          {Schema.map((cell) => (
+            <Grid item xs={12}>
+              <Typography variant="h6">{cell.title}</Typography>
+              <SchematizedItem
+                value={row[cell.key].toString()}
+                type={cell.type}
+              />
+            </Grid>
+          ))}
         </Grid>
-        <Grid item xs={4}>
-          <Item>xs=4</Item>
-        </Grid>
-        <Grid item xs={4}>
-          <Item>xs=4</Item>
-        </Grid>
-        <Grid item xs={8}>
-          <Item>xs=8</Item>
-        </Grid>
-      </Grid>
-    </Box>
+      ))}
+    </Grid>
   );
 }

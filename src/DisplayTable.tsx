@@ -6,9 +6,11 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import SchematizedItem from "./SchematizedItem";
-import { Schema, rows } from "./BackendRequests";
+import { Schema } from "./BackendRequests";
+import { BackendDataRecord } from "./DataTypes";
 
-export default function DisplayTable() {
+type BackendData = { Data: BackendDataRecord[] };
+export default function DisplayTable(rows: BackendData) {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -22,7 +24,7 @@ export default function DisplayTable() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+          {rows.Data.map((row) => (
             <TableRow
               key={row.name}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}

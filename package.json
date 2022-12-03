@@ -1,6 +1,7 @@
 {
   "name": "sunshine-rebel",
   "homepage": ".",
+  "start": "set PORT=3006 && react-scripts start",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

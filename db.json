@@ -1,29 +1,32 @@
 {
   "food": [
     {
-      "imageUrl": "https://start-page.buffer.com/cdn-cgi/image/width=200,height=200/https://buffer-start-page-uploads.s3.amazonaws.com/63626e169a1b8a414924cdcc/1668423340895.icon%20gelb.png",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Blueberry_frozen_yoghurt_%284937999312%29.jpg/330px-Blueberry_frozen_yoghurt_%284937999312%29.jpg",
       "name": "Frozen yoghurt",
       "calories": 159,
       "fat": 6.0,
       "carbs": 24,
-      "protein": 4.0
+      "protein": 4.0,
+      "containsMilk": true
     },
     {
-      "imageUrl": "https://start-page.buffer.com/cdn-cgi/image/width=200,height=200/https://buffer-start-page-uploads.s3.amazonaws.com/63626e169a1b8a414924cdcc/1668423340895.icon%20gelb.png",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IceCreamSandwich.jpg/330px-IceCreamSandwich.jpg",
       "name": "Ice cream sandwich",
       "calories": 159,
       "fat": 9.0,
       "carbs": 37,
-      "protein": 4.3
+      "protein": 4.3,
+      "containsMilk": true
     },
     {
-      "imageUrl": "https://start-page.buffer.com/cdn-cgi/image/width=200,height=200/https://buffer-start-page-uploads.s3.amazonaws.com/63626e169a1b8a414924cdcc/1668423340895.icon%20gelb.png",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Mjuk_pepparkaka_med_lingon.jpg/375px-Mjuk_pepparkaka_med_lingon.jpg",
       "name": "Gingerbread",
       "calories": 356,
       "fat": 16.0,
       "carbs": 49,
-      "protein":  3.9
+      "protein": 3.9,
+      "containsMilk": false
     }
-    
+
   ]
 }

@@ -6,17 +6,17 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import SchematizedItem from "./SchematizedItem";
-import { Schema } from "./BackendRequests";
-import { BackendDataRecord } from "./DataTypes";
 
-type BackendData = { Data: BackendDataRecord[] };
-export default function DisplayTable(rows: BackendData) {
+import { BackendDataRecord, ItemStrucutreList } from "./DataTypes";
+
+type DisplayTableProps = { data: BackendDataRecord[],schema:ItemStrucutreList };
+export default function DisplayTable(props: DisplayTableProps) {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            {Schema.map((cell) => (
+            {props.schema.map((cell) => (
               <TableCell component="th" scope="row">
                 {cell.title}
               </TableCell>
@@ -24,12 +24,12 @@ export default function DisplayTable(rows: BackendData) {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.Data.map((row) => (
+          {props.data.map((row) => (
             <TableRow
               key={row.name}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
-              {Schema.map((cell) => (
+              {props.schema.map((cell) => (
                 <TableCell component="th" scope="row">
                   <SchematizedItem
                     value={row[cell.key].toString()}

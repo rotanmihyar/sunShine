@@ -3,17 +3,18 @@ import TableGrid from "./TableGridSwitch";
 import Header from "./SunShineHeader";
 import { BackendDataRecord } from "./DataTypes";
 import { useEffect, useState } from "react";
+import { Paper } from "@mui/material";
+import { FetchFoodData } from "./BackendRequests";
+import { foodDataFullSchema } from "./Schemas";
 
 export function App() {
-  const [rows, setRows] = useState<BackendDataRecord[]>(
+  const [foodData, setFoodData] = useState<BackendDataRecord[]>(
     [] as BackendDataRecord[]
   );
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const result = await fetch("http://localhost:3000/food");
-        const body = await result.json();
-        setRows(body);
+        setFoodData(await FetchFoodData());
       } catch (err) {}
     };
     fetchData();
@@ -22,7 +23,18 @@ export function App() {
   return (
     <div className="App">
       <Header />
-      <TableGrid Data={rows} />
+      <Paper
+        sx={{
+          width: "100%",
+          pb: "50px",
+          minHeight: "100vh",
+          maxWidth: 1000,
+          margin: "auto",
+        }}
+      >
+        {" "}
+        <TableGrid schema={foodDataFullSchema} data={foodData} />
+      </Paper>
     </div>
   );
 }

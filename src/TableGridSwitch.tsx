@@ -6,17 +6,17 @@ import {
   FormLabel,
   RadioGroup,
   FormControlLabel,
-  Radio,Paper
+  Radio
 } from "@mui/material";
-import { BackendDataRecord } from "./DataTypes";
+import { BackendDataRecord, ItemStrucutreList } from "./DataTypes";
 
 
 export enum TableStyles {
   Table = "Table",
   Grid = "Grid",
 }
-type BackendData = { Data: BackendDataRecord[]; };
-export default function TableGrid(rows:BackendData) {
+type TableGridProp = { data: BackendDataRecord[],schema:ItemStrucutreList };
+export default function TableGrid(props:TableGridProp) {
   const [DisplayStyle, SetDisplayStyle] = useState<TableStyles>(
     TableStyles.Table
   );
@@ -45,7 +45,7 @@ export default function TableGrid(rows:BackendData) {
       </RadioGroup>
       <span> You've selected: {DisplayStyle}</span>
       <div className="currentValue"></div>
-      {DisplayStyle === TableStyles.Table ? <DisplayTable  Data={rows.Data} /> : <Paper sx={{width:"100%", pb: '50px', minHeight: '100vh', maxWidth: 1000, margin: 'auto' }}> <DisplayGrid Data={rows.Data} /></Paper>}
+      {DisplayStyle === TableStyles.Table ? <DisplayTable schema={props.schema} data={props.data} /> : <DisplayGrid schema={props.schema} data={props.data} />}
     </FormControl>
   );
 }

@@ -2,6 +2,7 @@ import Box from "@mui/material/Box";
 import Checkbox from "@material-ui/core/Checkbox";
 import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
+import Link from "@material-ui/core/Link";
 import { ReactElement } from "react";
 import { DisplayItemTypes } from "./DataTypes";
 
@@ -23,7 +24,9 @@ export default function SchmetizedItem(
     case DisplayItemTypes.Date:
       return <>{new Date(props.value).toString()}</>;
     case DisplayItemTypes.Boolean:
-      return <Checkbox  checked={JSON.parse(props.value)} />;
+      return <Checkbox checked={JSON.parse(props.value)} />;
+      case DisplayItemTypes.link:
+      return <Link  href={props.value} target="_blank" >Open Image</Link>;
     case DisplayItemTypes.Select:
       return (
         <Select

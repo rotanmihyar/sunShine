@@ -4,6 +4,7 @@ export enum DisplayItemTypes {
   Date,
   Boolean,
   Select,
+  link,
 
 }
 
@@ -19,4 +20,5 @@ export type BackendDataRecord = {
   carbs: number;
   protein: number;
   containsMilk: boolean;
+  link: string;
 };

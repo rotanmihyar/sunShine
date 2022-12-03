@@ -36,3 +36,17 @@ export const foodDataFullSchema: ItemStrucutreList = [
     key: "containsMilk",
   },
 ];
+
+export const ImageLinkSchema: ItemStrucutreList = [
+  {
+    title: "Image",
+    type: DisplayItemTypes.link,
+    key: "imageUrl",
+  },
+  {
+    title: "Item Name",
+    type: DisplayItemTypes.Text,
+    key: "name",
+  },
+  
+];

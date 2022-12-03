@@ -5,7 +5,7 @@ import { BackendDataRecord } from "./DataTypes";
 import { useEffect, useState } from "react";
 import { Paper } from "@mui/material";
 import { FetchFoodData } from "./BackendRequests";
-import { foodDataFullSchema } from "./Schemas";
+import { foodDataFullSchema, ImageLinkSchema } from "./Schemas";
 
 export function App() {
   const [foodData, setFoodData] = useState<BackendDataRecord[]>([]);
@@ -26,6 +26,7 @@ export function App() {
       >
         
         <TableGrid schema={foodDataFullSchema} data={foodData} />
+        <TableGrid schema={ImageLinkSchema} data={foodData} />
       </Paper>
     </div>
   );

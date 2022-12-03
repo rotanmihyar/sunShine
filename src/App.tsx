@@ -8,9 +8,7 @@ import { FetchFoodData } from "./BackendRequests";
 import { foodDataFullSchema } from "./Schemas";
 
 export function App() {
-  const [foodData, setFoodData] = useState<BackendDataRecord[]>(
-    [] as BackendDataRecord[]
-  );
+  const [foodData, setFoodData] = useState<BackendDataRecord[]>([]);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -24,15 +22,9 @@ export function App() {
     <div className="App">
       <Header />
       <Paper
-        sx={{
-          width: "100%",
-          pb: "50px",
-          minHeight: "100vh",
-          maxWidth: 1000,
-          margin: "auto",
-        }}
+       className="PaperStyle"
       >
-        {" "}
+        
         <TableGrid schema={foodDataFullSchema} data={foodData} />
       </Paper>
     </div>

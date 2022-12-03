@@ -26,7 +26,6 @@ export default function TableGrid(props:TableGridProp) {
       <FormLabel id="demo-radio-buttons-group-label">Change Style</FormLabel>
       <RadioGroup
         aria-labelledby="demo-radio-buttons-group-label"
-        defaultValue="Table"
         name="radio-buttons-group"
         value={DisplayStyle}
         onChange={(x) => SetDisplayStyle(x.target.value as TableStyles)}
@@ -43,9 +42,11 @@ export default function TableGrid(props:TableGridProp) {
           label="Grid"
         />
       </RadioGroup>
-      <span> You've selected: {DisplayStyle}</span>
+    
       <div className="currentValue"></div>
-      {DisplayStyle === TableStyles.Table ? <DisplayTable schema={props.schema} data={props.data} /> : <DisplayGrid schema={props.schema} data={props.data} />}
+      {DisplayStyle === TableStyles.Table ?
+        <DisplayTable schema={props.schema} data={props.data} /> :
+        <DisplayGrid schema={props.schema} data={props.data} />}
     </FormControl>
   );
 }

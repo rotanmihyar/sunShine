@@ -6,8 +6,11 @@ export enum DisplayItemTypes {
   Select,
 
 }
+
 type ItemStructure = { title: string; type: DisplayItemTypes; key: keyof BackendDataRecord };
+
 export type ItemStrucutreList = ItemStructure[];
+
 export type BackendDataRecord = {
   imageUrl: string;
   name: string;
@@ -15,4 +18,5 @@ export type BackendDataRecord = {
   fat: number;
   carbs: number;
   protein: number;
+  containsMilk: boolean;
 };

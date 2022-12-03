@@ -30,4 +30,9 @@ export const foodDataFullSchema: ItemStrucutreList = [
     type: DisplayItemTypes.Text,
     key: "calories",
   },
+  {
+    title: "Contains Milk",
+    type: DisplayItemTypes.Boolean,
+    key: "containsMilk",
+  },
 ];

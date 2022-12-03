@@ -4,7 +4,9 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
 import { ReactElement } from "react";
 import { DisplayItemTypes } from "./DataTypes";
+
 type SchmetizedItemProp = { value: string; type: DisplayItemTypes };
+
 export default function SchmetizedItem(
   props: SchmetizedItemProp
 ): ReactElement {
@@ -21,7 +23,7 @@ export default function SchmetizedItem(
     case DisplayItemTypes.Date:
       return <>{new Date(props.value).toString()}</>;
     case DisplayItemTypes.Boolean:
-      return <Checkbox checked={!!props.value} />;
+      return <Checkbox  checked={JSON.parse(props.value)} />;
     case DisplayItemTypes.Select:
       return (
         <Select

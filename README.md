@@ -1,4 +1,4 @@
-# Sunshine Rebel
+# Sunshine Rebel -React Typescript
 
 Summary
 

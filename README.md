@@ -9,12 +9,13 @@ Summary
 4) The data is handed over as a parameter.
 5)The table has an option to be displayed as table or as grid.
 
-## How does it work .
+## How does it work 
 
 
 
 The solution provides a fully custmizable react components to display tables and grids for given schema.
-For Example, the picture below displays a table with schema that contains the following columns 
+For Example, the picture below displays a table with schema that contains the following columns :
+
 [Image	Item Name	Fat(g)	Carbs(g)	Protein(g)	Calories(g)	Contains Milk]
 ![image](https://github.com/rotanmihyar/sunShine/blob/master/ScreenShots/table.png)
 
@@ -25,13 +26,13 @@ For both examples above, the end user is able easily to change the layout from t
 ![image](https://github.com/rotanmihyar/sunShine/blob/master/ScreenShots/grid.png)
 
 ## Primary Components
-### Table Grid https://github.com/rotanmihyar/sunShine/blob/master/src/TableGridSwitch.tsx
+### [Table Grid](https://github.com/rotanmihyar/sunShine/blob/master/src/TableGridSwitch.tsx)
 This component will allow switching the views between display grid and display table through radio buttons.
 
-### Display Grid https://github.com/rotanmihyar/sunShine/blob/master/src/DisplayGrid.tsx
+### [Display Grid](https://github.com/rotanmihyar/sunShine/blob/master/src/DisplayGrid.tsx)
 This component contains customizable Grid UI views and functions.
 
-### Display Table https://github.com/rotanmihyar/sunShine/blob/master/src/DisplayTable.tsx
+### [Display](Table https://github.com/rotanmihyar/sunShine/blob/master/src/DisplayTable.tsx)
 This component contains customizable table UI views and functions.
 
 ## Used Frameworks
@@ -46,34 +47,4 @@ and you can access it by calling this API
 
 ### Material UI
 Material UI is an open-source React component library that implements Google's Material Design. It includes a comprehensive collection of prebuilt components that are ready for use in production right out of the box.
-
-#### table is handed over as a parameters
-you can pass any schema to the table and it will be handled automatically  
-
-![image](https://github.com/rotanmihyar/sunShine/blob/master/ScreenShots/asParameter.png)
-
-
-
-#### The table is able to display images, links, dates, booleans, and select input
-
-the table will handle any type of data dynamically it will convert the cell to the selected type from the schema.
-
-
-
-
-
-#### The data is handed over as a parameter
-the data is passed to the table and grid as parameter means the table is dynamic , will except any type to data with any schema and will handle it dynamically
-
-![image](https://github.com/rotanmihyar/sunShine/blob/master/ScreenShots/dataParameter.png)
-
-
-
-
-### The table has an option to be displayed as table or as grid
-You can switch between Grid and Table by changing the selected radio button.
-
-![image](https://github.com/rotanmihyar/sunShine/blob/master/ScreenShots/dataParameter.png)
-
-
 

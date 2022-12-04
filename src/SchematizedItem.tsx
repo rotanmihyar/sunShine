@@ -26,7 +26,7 @@ export default function SchmetizedItem(
     case DisplayItemTypes.Boolean:
       return <Checkbox checked={JSON.parse(props.value)} />;
       case DisplayItemTypes.link:
-      return <Link  href={props.value} target="_blank" >Open Image</Link>;
+      return <Link  href={props.value} target="_blank" >Open Link</Link>;
     case DisplayItemTypes.Select:
       return (
         <Select

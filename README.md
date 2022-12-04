@@ -1,46 +1,50 @@
-# Getting Started with Create React App
+# Sunshine Rebel
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Summary
 
-## Available Scripts
+#### The project introduces the following
+1) Mocked API.
+2) The structure of the table is handed over as a parameters.
+3) The table is able to display images, links, dates, booleans, and select input.
+4) The data is handed over as a parameter.
+5)The table has an option to be displayed as table or as grid..
 
-In the project directory, you can run:
+### Mocked API
+After pulling the code you can run the following on the terminal : **json-server --watch src/db.json**
+and you can access it by calling this API
+**http://localhost:3000/food**
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![image](https://github.com/rotanmihyar/sunShine/blob/master/ScreenShots/API.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+#### table is handed over as a parameters
+you can pass any schema to the table and it will be handled automatically  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![image](](https://github.com/rotanmihyar/sunShine/blob/master/ScreenShots/asParameter.png)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### The table is able to display images, links, dates, booleans, and select input
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+the table will handle any type of data dynamically it will convert the cell to the selected type from the schema.
 
-### `npm run eject`
+![image](](https://github.com/rotanmihyar/sunShine/blob/master/ScreenShots/table.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### The data is handed over as a parameter
+the data is passed to the table and grid as parameter means the table is dynamic , will except any type to data with any schema and will handle it dynamically
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![image](https://github.com/rotanmihyar/sunShine/blob/master/ScreenShots/dataParameter.png)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+### The table has an option to be displayed as table or as grid
+You can switch between Grid and Table by changing the selected radio button.
+
+![image](https://github.com/rotanmihyar/sunShine/blob/master/ScreenShots/dataParameter.png)
+
+
+

@@ -1,6 +1,9 @@
 # Sunshine Rebel -React Typescript
 
 Summary
+The React App is fully functional and posted online under the following URL:
+
+http://bdnaeyak.com/SunShine/
 
 #### The project introduces the following
 1) The table has an option to be displayed as table or as grid.

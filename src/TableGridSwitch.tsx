@@ -8,15 +8,15 @@ import {
   FormControlLabel,
   Radio
 } from "@mui/material";
-import { BackendDataRecord, ItemStrucutreList } from "./DataTypes";
+import { ItemStrucutreList } from "./DataTypes";
 
 
 export enum TableStyles {
   Table = "Table",
   Grid = "Grid",
 }
-type TableGridProp = { data: BackendDataRecord[],schema:ItemStrucutreList };
-export default function TableGrid(props:TableGridProp) {
+type TableGridProp<T> = { data: T[],schema:ItemStrucutreList<T> };
+export default function TableGrid<T>(props:TableGridProp<T>) {
   const [DisplayStyle, SetDisplayStyle] = useState<TableStyles>(
     TableStyles.Table
   );

@@ -7,10 +7,10 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import SchematizedItem from "./SchematizedItem";
 
-import { BackendDataRecord, ItemStrucutreList } from "./DataTypes";
+import { ItemStrucutreList } from "./DataTypes";
 
-type DisplayTableProps = { data: BackendDataRecord[],schema:ItemStrucutreList };
-export default function DisplayTable(props: DisplayTableProps) {
+type DisplayTableProps<T> = { data: T[]; schema: ItemStrucutreList<T> };
+export default function DisplayTable<T>(props: DisplayTableProps<T>) {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -26,13 +26,12 @@ export default function DisplayTable(props: DisplayTableProps) {
         <TableBody>
           {props.data.map((row) => (
             <TableRow
-              key={row.name}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
               {props.schema.map((cell) => (
                 <TableCell component="th" scope="row">
                   <SchematizedItem
-                    value={row[cell.key].toString()}
+                    value={String(row[cell.key])}
                     type={cell.type}
                   />
                 </TableCell>

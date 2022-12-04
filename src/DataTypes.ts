@@ -8,9 +8,9 @@ export enum DisplayItemTypes {
 
 }
 
-type ItemStructure = { title: string; type: DisplayItemTypes; key: keyof BackendDataRecord };
+type ItemStructure<T> = { title: string; type: DisplayItemTypes; key: keyof T };
 
-export type ItemStrucutreList = ItemStructure[];
+export type ItemStrucutreList<T> = ItemStructure<T>[];
 
 export type BackendDataRecord = {
   imageUrl: string;

@@ -1,5 +1,5 @@
-import { DisplayItemTypes, ItemStrucutreList } from "./DataTypes";
-export const foodDataFullSchema: ItemStrucutreList = [
+import { BackendDataRecord, DisplayItemTypes, ItemStrucutreList } from "./DataTypes";
+export const foodDataFullSchema: ItemStrucutreList<BackendDataRecord> = [
   {
     title: "Image",
     type: DisplayItemTypes.Image,
@@ -37,7 +37,7 @@ export const foodDataFullSchema: ItemStrucutreList = [
   },
 ];
 
-export const ImageLinkSchema: ItemStrucutreList = [
+export const ImageLinkSchema: ItemStrucutreList<BackendDataRecord> = [
   {
     title: "Image",
     type: DisplayItemTypes.link,

@@ -3,11 +3,11 @@
 Summary
 
 #### The project introduces the following
-1) Mocked API.
+1) The table has an option to be displayed as table or as grid.
 2) The structure of the table is handed over as a parameters.
 3) The table is able to display images, links, dates, booleans, and select input.
 4) The data is handed over as a parameter.
-5) The table has an option to be displayed as table or as grid.
+5) Mocked API.
 
 ## How does it work 
 

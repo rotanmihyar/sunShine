@@ -32,7 +32,7 @@ This component will allow switching the views between display grid and display t
 ### [Display Grid](https://github.com/rotanmihyar/sunShine/blob/master/src/DisplayGrid.tsx)
 This component contains customizable Grid UI views and functions.
 
-### [Display](Table https://github.com/rotanmihyar/sunShine/blob/master/src/DisplayTable.tsx)
+### [Display Table](https://github.com/rotanmihyar/sunShine/blob/master/src/DisplayTable.tsx)
 This component contains customizable table UI views and functions.
 
 ## Used Frameworks

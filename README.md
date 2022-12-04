@@ -21,7 +21,7 @@ and you can access it by calling this API
 #### table is handed over as a parameters
 you can pass any schema to the table and it will be handled automatically  
 
-![image](](https://github.com/rotanmihyar/sunShine/blob/master/ScreenShots/asParameter.png)
+![image](https://github.com/rotanmihyar/sunShine/blob/master/ScreenShots/asParameter.png)
 
 
 
@@ -29,7 +29,7 @@ you can pass any schema to the table and it will be handled automatically
 
 the table will handle any type of data dynamically it will convert the cell to the selected type from the schema.
 
-![image](](https://github.com/rotanmihyar/sunShine/blob/master/ScreenShots/table.png)
+![image](https://github.com/rotanmihyar/sunShine/blob/master/ScreenShots/table.png)
 
 
 
